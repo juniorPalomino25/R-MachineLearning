@@ -20,7 +20,9 @@ plot(x, xlab="x",ylab=expression(F[x]), cex=2, pch=21,
 n=1:20
 fib = 1/sqrt(5)* ((1+sqrt(5))/2)^n - 1/sqrt(5)* ((1-sqrt(5))/2)^n
 plot(fib, xlab="n",ylab=expression(F[n]), cex=1,pch=21,
-     main="Funcion fibonacci",col="blue", bg="orange")
+     main="Funcion fibonacci", col="blue", bg="orange",
+     type="o", lty ="dashed", lwd=2,
+     xlim=c(1,10), ylim=c(1,100), yaxp=c(0,100,10))
 
 par(mfrow=c(1,1))
 ```
@@ -38,5 +40,12 @@ plot(x,y,xlab="x",ylab=expression(F[x]), cex=1,pch=21,col="red", type="s")
 plot(x,y,xlab="x",ylab=expression(F[x]), cex=1,pch=21,col="black", type="l")
 plot(x,y,xlab="x",ylab=expression(F[x]), cex=1,pch=21,col="green", type="p")
 par(mfrow=c(1,1))
+```
+## R - Añadir punto y recta
+```{r}
+plot(tan, xlim=c(-pi,pi), ylim=c(-5,5), ylab = expression(tan[x]))
+abline(v=c(-pi/2,pi/2), col="red")
+abline(v=0,h=0, col="blue")
+points(0,0,pch=21, cex=1, bg="black")
 ```
 
